@@ -57,6 +57,10 @@ static const CGFloat MarginLeft = 20.0f;
     return self;
 }
 
+- (void)dealloc {
+    self.scrollView.delegate = nil;
+}
+
 - (void)commonInit
 {
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
